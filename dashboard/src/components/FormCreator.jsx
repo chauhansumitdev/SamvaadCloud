@@ -24,7 +24,7 @@ const FormBuilder = () => {
 
   const submitForm = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/submit-form', form);
+      const response = await axios.post('https://samvaad.onrender.com/submit-form', form);
       console.log('Form submitted:', response.data);
     } catch (error) {
       console.error('Error submitting form:', error.message);

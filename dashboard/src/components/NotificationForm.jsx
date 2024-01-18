@@ -12,7 +12,7 @@ const NotificationForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/notifications', { message });
+      const response = await axios.post('https://samvaad.onrender.com/notifications', { message });
       console.log('Notification posted:', response.data);
     } catch (error) {
       console.error('Error posting notification:', error);

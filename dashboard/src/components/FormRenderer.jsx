@@ -11,7 +11,7 @@ const FormRenderer = () => {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/forms/${formId}`);
+        const response = await axios.get(`https://samvaad.onrender.com/forms/${formId}`);
         setForm(response.data);
       } catch (error) {
         console.error('Error fetching form:', error.message);
@@ -27,7 +27,7 @@ const FormRenderer = () => {
 
   const submitFormData = async () => {
     try {
-      const response = await axios.post(`http://localhost:3000/submit-form/${formId}`, formData);
+      const response = await axios.post(`https://samvaad.onrender.com/submit-form/${formId}`, formData);
       console.log('Form submitted:', response.data);
     } catch (error) {
       console.error('Error submitting form data:', error.message);

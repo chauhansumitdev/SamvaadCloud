@@ -8,7 +8,7 @@ const MessageSender = () => {
 
   const handleSendMessages = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/send-messages', {
+      const response = await axios.post('https://samvaad.onrender.com/send-messages', {
         numbers: numbers.split(',').map((num) => num.trim()),
         message,
       });

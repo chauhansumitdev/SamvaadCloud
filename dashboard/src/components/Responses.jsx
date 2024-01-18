@@ -8,7 +8,7 @@ const Responses = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/combinedData');
+        const response = await axios.get('https://samvaad.onrender.com/combinedData');
         setYourFormData(response.data.yourFormData);
         setEmergencyData(response.data.emergencyData);
       } catch (error) {

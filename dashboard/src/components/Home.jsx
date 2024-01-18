@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/stats');
+        const response = await axios.get('https://samvaad.onrender.com/stats');
         const data = response.data;
         setStats(data);
       } catch (error) {

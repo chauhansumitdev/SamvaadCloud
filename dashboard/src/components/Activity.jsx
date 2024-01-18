@@ -8,12 +8,12 @@ const Activity = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/home'); 
+      const response = await axios.get('https://samvaad.onrender.com/home'); 
       const postsWithComments = await Promise.all(
         response.data.posts.reverse().map(async (user) => {
           const postsWithComments = await Promise.all(
             user.posts.map(async (post) => {
-              const commentsResponse = await axios.get(`/get-comments/${post._id}`); 
+              const commentsResponse = await axios.get(`https://samvaad.onrender.com/get-comments/${post._id}`); 
               post.comments = commentsResponse.data.comments;
               return post;
             })
@@ -58,7 +58,7 @@ const Activity = () => {
                 <p><IoLocationSharp  style={{width:"15px", height:"15px"}}/> {post.location}</p>
                 <div>
                   {post.images.map((image) => (
-                    <img key={image._id} src={`http://localhost:3000/images/${image.url}`} alt="Post" />
+                    <img key={image._id} src={`https://samvaad.onrender.com/images/${image.url}`} alt="Post" />
                   ))}
                 </div>
                 <h6>Posted by: {user.username}</h6>
