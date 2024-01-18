@@ -59,7 +59,7 @@ const MainContent = () => {
                 <p><IoLocationSharp  style={{width:"15px", height:"15px"}}/> {post.location}</p>
                 <div>
                   {post.images.map((image) => (
-                    <img key={image._id} src={`http://localhost:3000/images/${image.url}`} alt="Post" />
+                    <img key={image._id} src={`https://samvaad.onrender.com/images/${image.url}`} alt="Post" />
                   ))}
                 </div>
                 <h6>Posted by: {user.username}</h6>
